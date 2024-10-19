@@ -6,6 +6,69 @@
     <title>Drag and Drop Quiz</title>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            width: 90%;
+            height: 90vh;
+        }
+
+        #panel1 {
+            width: 20%;
+            max-height: 100%;
+            overflow-y: auto;
+            margin: 0 2.5%;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #question-panels {
+            width: 75%;
+            max-height: 100%;
+            overflow-y: auto;
+            margin: 0 2.5%;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .name-item, .name-placeholder {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .picture-panel {
+            margin-bottom: 10px;
+        }
+
+        img.picture {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+    </style>
 </head>
 <body>
     <h2>Drag and Drop Quiz</h2>
