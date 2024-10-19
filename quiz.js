@@ -45,7 +45,7 @@ function generateQuestions() {
         picturePanel.ondragover = allowDrop;
 
         const picture = document.createElement("img");
-        picture.src = "https://via.placeholder.com/150";
+        picture.src = "";
         picture.alt = "Person " + i;
         picture.className = "picture";
 
@@ -81,7 +81,6 @@ function dropToPlaceholder(event) {
         if (data === correctId) {
             placeholder.textContent = draggedElement.textContent;
             correctAnswers++;
-            alert("Correct! Total Correct Answers: " + correctAnswers);
         } else {
             alert("Incorrect name. Try again!");
         }
