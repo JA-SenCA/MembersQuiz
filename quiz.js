@@ -2,9 +2,28 @@ let correctAnswers = 0;
 const totalQuestions = 144;
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetchNamesFromCSV();
-    generateQuestions();
+    // Add drop and dragover event handlers programmatically
+    const panel1 = document.getElementById("panel1");
+
+    panel1.addEventListener("drop", drop);
+    panel1.addEventListener("dragover", allowDrop);
+    
+    generateNames(); // Assuming you have a generateNames() function
+    generateQuestions(); // Assuming you have a generateQuestions() function
 });
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    var draggedElement = document.getElementById(data);
+    if (draggedElement) {
+        event.target.appendChild(draggedElement);
+    }
+}
 
 function fetchNamesFromCSV() {
     fetch('names.csv')
