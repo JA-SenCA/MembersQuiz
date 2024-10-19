@@ -7,14 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     panel1.addEventListener("drop", drop);
     panel1.addEventListener("dragover", allowDrop);
-    
+    fetchNamesFromCSV()
     generateNames(); // Assuming you have a generateNames() function
     generateQuestions(); // Assuming you have a generateQuestions() function
 });
 
-function allowDrop(event) {
-    event.preventDefault();
-}
 
 function drop(event) {
     event.preventDefault();
@@ -64,7 +61,7 @@ function generateQuestions() {
         picturePanel.ondragover = allowDrop;
 
         const picture = document.createElement("img");
-        picture.src = "";
+        picture.src = "https://via.placeholder.com/150";
         picture.alt = "Person " + i;
         picture.className = "picture";
 
