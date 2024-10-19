@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     panel1.addEventListener("drop", drop);
     panel1.addEventListener("dragover", allowDrop);
-    fetchNamesFromCSV()
+    fetchNamesFromCSV();
     generateQuestions(); // Assuming you have a generateQuestions() function
 });
 
