@@ -21,13 +21,6 @@ function parseCSV(data) {
     return lines.slice(1).map(line => line.trim()).filter(line => line);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Instead of fetching, directly define the names here.
-    const names = ["Alice", "Bob", "Charlie", "Diana", "Ethan"];
-    generateNames(names);
-    generateQuestions();
-});
-
 function generateNames(names) {
     const panel1 = document.getElementById("panel1");
     names.forEach((name, index) => {
